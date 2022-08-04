@@ -1,0 +1,119 @@
+body{
+  font-family: system-ui, serif;
+  text-align:center;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.bg{
+  background-image: url('https://media.cntraveler.com/photos/5ea875ba4e5fff00083ccef0/master/w_3600,c_limit/NormalPeople-Hulu-2020.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1{
+
+  color:#fc0404;
+  font-size:3.5em;
+  font-weight:bold;
+  line-height: 1.1;
+  --x-offset: -0.0625em;
+  --y-offset: 0.0625em;
+  --stroke: 0.025em;
+  --background-color: white;
+  --stroke-color: lightblue;
+  
+  text-shadow: 
+    
+    var(--x-offset)
+    var(--y-offset)
+    0px
+    var(--background-color), 
+    
+    calc( var(--x-offset) - var(--stroke) )
+    calc( var(--y-offset) + var(--stroke) )
+    0px
+    var(--stroke-color);
+}
+
+h3{
+  color:rgb(255, 255, 255);
+  -webkit-text-stroke: 0.8px black;
+  font-size:1.25em;
+}
+
+.container{
+  position: absolute; /* taken out of the normal flow of the document */
+  top: 50%; /* moved down by 50% of the screen height */
+  transform: translateY(-50%); /* moved back up (Y axis) by half of its height to achieve the perfect center */
+  width: 100%; /* needs to be defined to keep the default block behavior */
+  text-align: center;
+  margin: 0; /* again, for perfect center */
+}
+
+/**@media (max-width : 240px) {
+h1 {
+   font-size:1em;
+  font-weight:200px;
+  }
+}*/
+
+.heart {
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/9632/heart.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  height: 50px;
+  width: 50px;
+  top: 10px;
+  left: 5px;
+}
+
+@media only screen and (max-width: 640px) {
+  /* Add your custom styles here for Mobile */
+  h1 {font-size:2.5px;font-weight:200px;}
+}
+@media only screen and (max-width: 480px) {
+  /* Add your custom styles here for smaller Mobile */
+  h1 {font-size:2em;font-weight:200px;}
+}
+
+.btn{
+  background-color: #ffffff;
+  text-align: center; 
+  font-size: 14px;
+  border-radius: 10px;
+  box-shadow: -5px 5px 10px rgba(100,100,100,.8);
+  letter-spacing:1px;
+  margin-bottom:50px;
+  padding: 10px 24px;
+}
+.btn:hover {
+   transform:scale(1.1);
+  transition: 0.2s;
+  letter-spacing:2.2px;
+  background-color:white;
+}
+.btn:focus,.btn:active{
+  outline:0 important!;
+}
+
+.well-sm {
+  padding: 9px;
+  border-radius: 3px;
+}
+.well {
+  margin: auto;
+  width: 600px;
+  min-height: 51px;
+  padding-left: 80px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+  box-shadow: inset 0 1px 1px rgb(0 0 0 / 5%);
+}
